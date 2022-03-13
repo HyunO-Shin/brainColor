@@ -44,8 +44,6 @@ export async function get(request){
      //let score = JSON.parse(request.body);      // request body를 객체로 변환. 실행 에러남. To access the request body...
      let score = await request.json();      // 실행 에러 나서 구글링 후 이걸로 변경. put()내 파라미터도 {request}로 변경.
 
-     console.log('SHO1 ', score);  // SHO added.
-
      /* 입력 형식 체크 */
      if (!score.name || !score.score) {
          console.log(score);
